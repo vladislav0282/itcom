@@ -7,7 +7,7 @@ import {Navbar} from "./components/Navbar/Navbar";
 import {Profile} from "./components/Profile/Profile";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import {News} from "./components/News/News";
-import { addPost } from './redax/state';
+import { addPost, addPost2 } from './redax/state';
 
 
 
@@ -25,7 +25,8 @@ const App = (props) => {
                 <Routes>
                     <Route path="/dialogs" element = {<Dialogs 
                     dialogs={props.state.messagesPage.dialogs} 
-                    messages={props.state.messagesPage.messages}/>}/>
+                    messages={props.state.messagesPage.messages}
+                    addMessage={props.addMessage}/>}/>
                     
                     <Route path="/profile" element={<Profile 
                     posts={props.state.profilePage.posts} 
