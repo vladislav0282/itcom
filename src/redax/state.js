@@ -1,5 +1,3 @@
-import React, {Component} from 'react';
-
 let state = {
     profilePage: {
         posts: [
