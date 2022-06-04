@@ -9,4 +9,4 @@ const News = (props) => {
   )
 };
 
-export default News;
+export {News};
