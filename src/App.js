@@ -7,6 +7,7 @@ import {Navbar} from "./components/Navbar/Navbar";
 import {Profile} from "./components/Profile/Profile";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import {News} from "./components/News/News";
+import { addPost } from './redax/state';
 
 
 
@@ -22,8 +23,13 @@ const App = (props) => {
               <Navbar/>
               <div className='app-wrapper-content'>
                 <Routes>
-                    <Route path="/dialogs" element = {<Dialogs dialogs={props.state.messagesPage.dialogs} messages={props.state.messagesPage.messages}/>}/>
-                    <Route path="/profile" element={<Profile posts={props.state.profilePage.posts}/>}/>
+                    <Route path="/dialogs" element = {<Dialogs 
+                    dialogs={props.state.messagesPage.dialogs} 
+                    messages={props.state.messagesPage.messages}/>}/>
+                    
+                    <Route path="/profile" element={<Profile 
+                    posts={props.state.profilePage.posts} 
+                    addPost={props.addPost}/>}/>
                     <Route path="/news" element={<News/>}/>
                 </Routes> 
               </div>
